@@ -1,0 +1,188 @@
+/* Header */
+* { box-sizing: border-box;}
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+header {
+    color: white;
+    background: linear-gradient(#391d18, #814236);
+    margin-top: 2.5rem;
+    padding-top: 3px;
+    padding-bottom: 20px;
+}
+h1, h2, h3, h4 { font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+h1 { font-weight: 100;}
+p {
+    line-height: 1.43;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+#buybutton {
+    border-color: #391d18;
+    background-color:#814236;
+    color: white;
+    display: none;
+}
+#buybutton:hover { background-color: #5d3027;}
+
+/* Nav */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #391d18;
+}
+nav li { float: left;}
+nav li a {
+    display: block;
+    color:#dfdfdf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li a:hover { color: white;}
+nav .floatright { float: right;}
+
+/* flex */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.flex-column {   
+    flex-basis: 100%;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+/* Features */
+#features{
+    background-color: #f8f8f8;
+    text-align: center;
+}
+#features .content, #uses .content {
+    background-color: white;
+    border-color: #dfdfdf;
+    border-radius: 3px;
+    height: 100%;
+}
+#features h2, #uses h2, #testimonials h2 {
+    font-variant: small-caps;
+    text-align: center;
+    padding-top: 10px;
+}
+#features svg {
+    fill: #814236;
+    width: 50px;
+    height: 50px;
+    float: left;
+    align-items: center;
+}
+h2 { margin-top: 0;}
+
+/* Uses */
+#uses { background-color: #ebebeb;}
+#uses h3 { margin-top: 0;}
+.image1 { content:url(../img/note-taking.jpg);}
+.image2 { content: url(../img/art.jpg);}
+.image3 { content: url(../img/drafting.jpg);}
+.image4 { content: url(../img/coloring.jpg);}
+.pic {
+    min-width: 100%;
+    height: 150px;
+    overflow: hidden
+}
+
+/* Testimonials */
+#testimonials { background-color: #f8f8f8;}
+#testimonials span {
+    font-size: 80%;
+    color: #999999;
+}
+#testimonials img {
+    float:left;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+#testimonials p {
+    float: left;
+    padding-left: 10px;
+}
+
+/* Footer */
+#footer {
+    background-color: #391d18;
+    color: #eeeeee;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+#footer a {
+    color: #aaaaaa;
+    text-decoration: none;
+}
+#footer a:hover{ color: white;}
+
+
+
+/* Media queries */
+@media (min-width: 768px) {
+    .container { width: 750px;} 
+    header .container { display: block;}
+    header p { max-width: 50%;}
+    #buybutton { display: block;}
+    header { 
+        color: black;
+        background-image:  url(../img/pencil-header-sm.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        margin-top: -25px;
+        padding-top: 120px;
+    }
+    nav { 
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        width:1px;
+        height:1px;
+        overflow:hidden;   
+    }
+    
+    #features .flex-column, #uses .flex-column { flex-basis: 50%; }
+    #features svg { float: none;}
+    #footer .icons {
+        float: right;
+        padding-right: 10px;
+    } 
+}
+@media (min-width: 992px) {
+    .container { width: 970px; }
+    header { background-image: url(../img/pencil-header-md.jpg);} 
+    header h1 {font-size: 3rem;}
+    header p {font-size: 1.5rem;}
+    #testimonials .flex-column { flex-basis: 33%;}
+}
+@media (min-width: 1200px) {
+    .container { width: 1170px; } 
+    header { background-image: url(../img/pencil-header-lg.jpg);}
+    header h1 {font-size: 4rem;}
+    header p {font-size: 2rem;}
+    #features .flex-column { flex-basis: 25%;}
+}
+
+
